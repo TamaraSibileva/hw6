@@ -2,20 +2,20 @@ package ru.netology.hw6.stats;
 
 public class StatsService {
 
-    public int sumSales(long[] sales) {
-        int sum = 0;
+    public long sumSales(long[] sales) {
+        long sum = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            sum = sum + (int) sales[i];
+            sum = sum + sales[i];
         }
         return sum;
     }
 
-    public int averageSumSales(long[] sales) {
-        int averageSum = 0;
+    public long averageSumSales(long[] sales) {
+        long averageSum = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            averageSum = (averageSum + (int) sales[i]) / 2;
+            averageSum = (averageSum + sales[i]) / 2;
         }
         return averageSum;
     }
@@ -24,7 +24,7 @@ public class StatsService {
         int maxMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if ((int) sales[i] >= (int) sales[maxMonth]) {
+            if (sales[i] >= sales[maxMonth]) {
                 maxMonth = i;
             }
         }
@@ -35,7 +35,7 @@ public class StatsService {
         int minMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if ((int) sales[i] <= (int) sales[minMonth]) {
+            if (sales[i] <= sales[minMonth]) {
                 minMonth = i;
             }
         }
@@ -44,10 +44,10 @@ public class StatsService {
 
     public int amountOfMinMonth(long[] sales) {
         int amountMinMonth = 0;
-        int averageSum = averageSumSales(sales);
+        long averageSum = averageSumSales(sales);
 
         for (int i = 0; i < sales.length; i++) {
-            if ((int) sales[i] < averageSum) {
+            if (sales[i] < averageSum) {
                 amountMinMonth = amountMinMonth + 1;
             }
         }
@@ -56,10 +56,10 @@ public class StatsService {
 
     public int amountOfMaxMonth(long[] sales) {
         int amountMaxMonth = 0;
-        int averageSum = averageSumSales(sales);
+        long averageSum = averageSumSales(sales);
 
         for (int i = 0; i < sales.length; i++) {
-            if ((int) sales[i] > averageSum) {
+            if (sales[i] > averageSum) {
                 amountMaxMonth = amountMaxMonth + 1;
             }
         }
