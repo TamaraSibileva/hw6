@@ -8,7 +8,7 @@ public class StatsServiceTest {
     public void shouldFindSumSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedSum = 180;
         int actualSum = service.sumSales(sales);
@@ -20,7 +20,7 @@ public class StatsServiceTest {
     public void shouldFindAverageSumSales() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAverageSum = 15;
         int actualAverageSum = service.averageSumSales(sales);
@@ -32,7 +32,7 @@ public class StatsServiceTest {
     public void shouldFindMaxMonth() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedDay = 8;
         int actualDay = service.maxSales(sales);
@@ -44,7 +44,7 @@ public class StatsServiceTest {
     public void shouldFindMinMonth() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedDay = 9;
         int actualDay = service.minSales(sales);
@@ -56,7 +56,7 @@ public class StatsServiceTest {
     public void shouldFindAmountMinMonth() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAmountMin = 5;
         int actualAmountMin = service.amountOfMinMonth(sales);
@@ -68,7 +68,7 @@ public class StatsServiceTest {
     public void shouldFindAmountMaxMonth() {
         StatsService service = new StatsService();
 
-        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedAmountMax = 5;
         int actualAmountMax = service.amountOfMinMonth(sales);
